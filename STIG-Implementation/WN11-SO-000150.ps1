@@ -1,3 +1,30 @@
+
+<#
+.SYNOPSIS
+    This PowerShell script checks whether the RestrictAnonymous registry value is set to 1 under LSA 
+    and creates or updates it if non-compliant.
+
+.NOTES
+    Author          : Chrisvem Mondejar
+    LinkedIn        : linkedin.com/in/cgmondejar/
+    GitHub          : github.com/cgmondejar
+    Date Created    : 2026-03-20
+    Last Modified   : 2026-03-20
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN11-SO-000150
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Copy, paste, and run the script. No further instructions required. 
+#>
+
 $regPath = "HKLM:\SYSTEM\CurrentControlSet\Control\Lsa"
 $valueName = "RestrictAnonymous"
 $expectedValue = 1
